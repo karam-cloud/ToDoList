@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./image/favicon.ico" type="image/x-icon">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+            <!-- نموذج إضافة المهام -->
+    <div class="add-task-form">
+        <input type="text" id="new-task" placeholder="أدخل مهمة جديدة..." />
+        <button onclick="addTask()">إضافة مهمة</button>
+    </div>
+
+    <div class="container">
+            <div class="task-list" id="not-started" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>لم تنفذ بعد</h2>
+                <ul id="not-started-tasks" class="task-ul">
+                    <!-- المهام ستضاف هنا ديناميكيًا -->
+                </ul>
+            </div>
+
+            <div class="task-list" id="in-progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>جاري التنفيذ</h2>
+                <ul id="in-progress-tasks" class="task-ul">
+                </ul>
+            </div>
+            <div class="task-list" id="completed" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <h2>منتهية</h2>
+                <ul id="completed-tasks" class="task-ul">
+                </ul>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
